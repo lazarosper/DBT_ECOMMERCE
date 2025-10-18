@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    database: ECOMMERCE_PROJECT
+    schema: RAWDATA
+    tables:
+      - name: customers
+      - name: geolocation
+      - name: orders
+      - name: order_items
+      - name: order_payments
+      - name: order_reviews
+      - name: products
+      - name: products_category_name_v2
+      - name: sellers
