@@ -12,5 +12,5 @@
     }}
 
     select *
-    from {{source('ecommerce', 'customers')}}
+    from {{ref('STG_Customers')}}
 {% endsnapshot %}
