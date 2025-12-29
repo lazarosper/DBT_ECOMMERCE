@@ -12,7 +12,7 @@ sources:
               - unique
               - not_null
 
-      - name: geolocation
+      - name: geo_location
 
       - name: orders
         columns:
@@ -46,6 +46,8 @@ sources:
                       - credit_card
                       - voucher
                       - boleto
+                      - debit_card
+                      
 
       - name: order_reviews
         columns:

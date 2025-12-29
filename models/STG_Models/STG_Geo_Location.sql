@@ -1,2 +1,3 @@
+
 select *
-from {{source("ecommerce","geolocation")}}
+from {{source("ecommerce","geo_location")}}
