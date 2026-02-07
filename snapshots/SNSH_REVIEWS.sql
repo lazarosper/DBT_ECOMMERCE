@@ -12,5 +12,5 @@
     }}
 
     select *
-    from {{ref('STG_REVIEWS')}}
+    from {{ref('STG_Reviews')}}
 {% endsnapshot %}

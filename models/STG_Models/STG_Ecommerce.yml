@@ -1,0 +1,69 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    database: ECOMMERCE_PROJECT
+    schema: RAWDATA
+    tables:
+      - name: customers
+        columns:
+          - name: customer_unique_id
+            tests:
+              - unique
+              - not_null
+
+      - name: geo_location
+
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+          - name: order_status
+            tests:
+              - accepted_values:
+                  arguments:
+                    values:
+                      - processing
+                      - approved
+                      - unavailable
+                      - shipped
+                      - delivered
+                      - created
+                      - canceled
+                      - invoiced
+
+      - name: order_items
+
+      - name: order_payments
+        columns:
+          - name: payment_type
+            tests:
+              - accepted_values:
+                  arguments:
+                    values:
+                      - credit_card
+                      - voucher
+                      - boleto
+                      - debit_card
+                      
+
+      - name: order_reviews
+        columns:
+          - name: review_score
+            tests:
+              - accepted_values:
+                  arguments:
+                    values: [1, 2, 3, 4, 5]
+
+      - name: products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+              - not_null
+
+      - name: products_category_name_v2
+
+      - name: sellers
