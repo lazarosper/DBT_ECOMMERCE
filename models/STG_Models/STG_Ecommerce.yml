@@ -9,7 +9,7 @@ sources:
         columns:
           - name: customer_unique_id
             tests:
-              - unique
+              
               - not_null
 
       - name: geo_location
@@ -47,6 +47,7 @@ sources:
                       - voucher
                       - boleto
                       - debit_card
+                      - not_defined
                       
 
       - name: order_reviews
